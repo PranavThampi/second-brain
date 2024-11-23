@@ -9,16 +9,18 @@ import { Tags } from "./pages/Tags";
 
 function App() {
   return (
-    <main className="h-screen w-screen bg-black flex">
+    <main className="h-full w-screen bg-black flex">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/tweets" element={<Tweets />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/documents" element={<Documents />} />
-        <Route path="/links" element={<Links />} />
-        <Route path="/tags" element={<Tags />} />
-      </Routes>
+      <div className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tweets" element={<Tweets />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/links" element={<Links />} />
+          <Route path="/tags" element={<Tags />} />
+        </Routes>
+      </div>
     </main>
   );
 }
